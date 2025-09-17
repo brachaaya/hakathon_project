@@ -1,11 +1,11 @@
 import tkinter as tk
 
 # from pygame.examples.scrap_clipboard import screen
-
-def on_english_click():
-    print("english")
-def on_hebrew_click():
-    print("hebrew")
+#
+# def on_english_click():
+#     print("english")
+# def on_hebrew_click():
+#     print("hebrew")
 
 root= tk.Tk()
 root.geometry('750x730')

@@ -19,15 +19,13 @@ def choose_level():
     :return: a dictionary
     """
     level = int(input("Choose your level :\n 1: Easy \n 2: Hard \n 3: choose your own words and level"))
-    if level == 1 :
-        return EASY_ENGLISH_DICT
-    elif level == 2 :
-        return HARD_ENGLISH_DICT
-    else:
-        return get_custom_dict()
+    # if level == 1 :
+    #     return EASY_ENGLISH_DICT
+    # elif level == 2 :
+    #     return HARD_ENGLISH_DICT
+    # else:
+    #     return get_custom_dict()
 
 dict = get_custom_dict()
 print(dict)
 
-
-print("hello1")
