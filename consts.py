@@ -1,6 +1,15 @@
 WINDOW_HEIGHT = 750
 WINDOW_WIDTH = 730
 
+WHICH_LEVEL = "Which level do you want? Enter 1 for easy, 2 for medium, 3 for hard: "
+HOW_MANY_EXERCISE = "Enter how many exercise you want: "
+
+ADDITION = " + "
+SUBTRACTION = " - "
+MULTIPLICATION = " * "
+DIVISION = " // "
+EQUAL = " = "
+
 
 EASY_HEBREW_DICT = {
     "קופץ": "ק.פ.צ",

@@ -1,12 +1,4 @@
-WHICH_LEVEL = "Which level do you want? Enter 1 for easy, 2 for medium, 3 for hard: "
-HOW_MANY_EXERCISE = "Enter how many exercise you want: "
-
-ADDITION = " + "
-SUBTRACTION = " - "
-MULTIPLICATION = " * "
-DIVISION = " // "
-EQUAL = " = "
-
+import consts
 import random
 
 def which_level():
@@ -16,7 +8,7 @@ def which_level():
             [the exercise[number1, the_math, number2], the result]
     """
     the_level = int(input(which_level()))
-    how_many_exercise = int(input(HOW_MANY_EXERCISE))
+    how_many_exercise = int(input(consts.HOW_MANY_EXERCISE))
     all_numbers = make_exercises(the_level, how_many_exercise)
     return all_numbers
 
@@ -91,12 +83,12 @@ def get_calculation():
     """
     the_math = random.randint(1, 4)
     if the_math == 1:
-        return ADDITION
+        return consts.ADDITION
     elif the_math == 2:
-        return SUBTRACTION
+        return consts.SUBTRACTION
     elif the_math == 3:
-        return MULTIPLICATION
-    return DIVISION
+        return consts.MULTIPLICATION
+    return consts.DIVISION
 
 def exercise_result(the_numbers, the_math):
     """
@@ -106,11 +98,11 @@ def exercise_result(the_numbers, the_math):
     :return: the answear of the exrcise
     """
     numbers = sort_the_numbers(the_numbers)
-    if the_math == ADDITION:
+    if the_math == consts.ADDITION:
         return numbers[1] + numbers[0]
-    elif the_math == SUBTRACTION:
+    elif the_math == consts.SUBTRACTION:
         return  numbers[1] - numbers[0]
-    elif the_math == MULTIPLICATION:
+    elif the_math == consts.MULTIPLICATION:
         return  numbers[1] * numbers[0]
     else:
         return numbers[1] // numbers[0]
