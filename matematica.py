@@ -1,5 +1,5 @@
-import consts
 import random
+import consts
 
 def which_level():
     """
@@ -19,7 +19,7 @@ def make_exercises(the_level, how_many_exercise):
     :param how_many_exercise:
     :return: the list of all exercises
     """
-    all_numbers = []
+    all_numbers = {}
     for i in range(how_many_exercise):
         the_numbers = find_numbers(the_level)
         the_math = get_calculation()
@@ -30,7 +30,7 @@ def make_exercises(the_level, how_many_exercise):
             the_math = get_calculation()
             the_result = exercise_result(the_numbers, the_math)
             exercise = [the_numbers[1], the_math, the_numbers[0]]
-        all_numbers.append([make_the_list_string(exercise), the_result])
+        all_numbers.update({make_the_list_string(exercise) : the_result})
     return all_numbers
 
 def find_numbers(the_level):
