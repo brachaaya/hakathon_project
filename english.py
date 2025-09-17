@@ -1,3 +1,6 @@
+import consts
+
+
 def get_custom_dict():
     """
     the user creates its own dictionary
@@ -20,9 +23,9 @@ def choose_level():
     """
     level = int(input("Choose your level :\n 1: Easy \n 2: Hard \n 3: choose your own words and level"))
     if level == 1 :
-        return EASY_ENGLISH_DICT
+        return consts.EASY_ENGLISH_DICT
     elif level == 2 :
-        return HARD_ENGLISH_DICT
+        return consts.HARD_ENGLISH_DICT
     else:
         return get_custom_dict()
 
