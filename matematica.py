@@ -113,7 +113,8 @@ def sort_the_numbers(the_numbers):
     :return: the list after sorted
     """
     numbers = the_numbers.copy()
-    return numbers.sort()
+    numbers.sort()
+    return numbers
 
 def appear_in_all_numbers(all_numbers, exercise):
     """
