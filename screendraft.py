@@ -16,14 +16,14 @@ color2='#05d7ff'
 color3='#65e7ff'
 color4= 'BLACK'
 
-screen_frame= tk.Frame(root, bg=color1, pady=40)
-screen_frame.pack(fill=tk.BOTH, expand=True)
-screen_frame.columnconfigure(0, weight=1)
-screen_frame.rowconfigure(0, weight=1)
-screen_frame.rowconfigure(1, weight=1)
+screendraft_frame= tk.Frame(root, bg=color1, pady=40)
+screendraft_frame.pack(fill=tk.BOTH, expand=True)
+screendraft_frame.columnconfigure(0, weight=1)
+screendraft_frame.rowconfigure(0, weight=1)
+screendraft_frame.rowconfigure(1, weight=1)
 
 english_button= tk.Button(
-    screen_frame,
+    screendraft_frame,
     background=color2,
     foreground=color4,
     activebackground=color3,
@@ -42,7 +42,7 @@ english_button= tk.Button(
 english_button.grid(column=0, row=0)
 
 hebrew_button= tk.Button(
-    screen_frame,
+    screendraft_frame,
     background=color2,
     foreground=color4,
     activebackground=color3,
