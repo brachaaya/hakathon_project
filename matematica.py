@@ -1,5 +1,5 @@
-import consts
 import random
+import consts
 
 def which_level():
     """
