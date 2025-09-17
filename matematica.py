@@ -18,6 +18,7 @@ def which_level():
     the_level = int(input(which_level()))
     how_many_exercise = int(input(HOW_MANY_EXERCISE))
     all_numbers = make_exercises(the_level, how_many_exercise)
+    return all_numbers
 
 def make_exercises(the_level, how_many_exercise):
     """
