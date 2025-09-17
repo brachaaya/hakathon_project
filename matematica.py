@@ -7,7 +7,7 @@ def which_level():
     :return: list of all the exercises every exercise:
             [the exercise[number1, the_math, number2], the result]
     """
-    the_level = int(input(which_level()))
+    the_level = int(input(consts.WHICH_LEVEL))
     how_many_exercise = int(input(consts.HOW_MANY_EXERCISE))
     all_numbers = make_exercises(the_level, how_many_exercise)
     return all_numbers
