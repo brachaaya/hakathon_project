@@ -133,8 +133,14 @@ while run:
         for btn in game_buttons:
             if btn.draw(screen):
                 selected_game= btn.text
-                # if selected_game=="math competition":
-                    # math_competition.one_min_competition()
+                if selected_game=="memory game":
+                    game_state="memory_game"
+
+    elif game_state == "memory_game":
+        title_font = pygame.font.SysFont("Arial", 28, bold=True)
+        text = title_font.render("Memory game", True, BLACK)
+        text_rect = text.get_rect(center=(SCREEN_WIDTH//2, 150))
+        screen.blit(text, text_rect)
 
 
     for event in pygame.event.get():
