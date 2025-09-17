@@ -5,7 +5,7 @@ ADDITION = " + "
 SUBTRACTION = " - "
 MULTIPLICATION = " * "
 DIVISION = " // "
-EQUAL = " = "
+#EQUAL = " = "
 
 import random
 
