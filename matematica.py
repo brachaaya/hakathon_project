@@ -5,7 +5,7 @@ ADDITION = " + "
 SUBTRACTION = " - "
 MULTIPLICATION = " * "
 DIVISION = " // "
-EQUAL = " = "
+#EQUAL = " = "
 
 import random
 
@@ -37,7 +37,7 @@ def make_exercises(the_level, how_many_exercise):
             the_math = get_calculation()
             the_result = exercise_result(the_numbers, the_math)
             exercise = [the_numbers[1], the_math, the_numbers[0]]
-        all_numbers.append([make_the_list_string(exercise), the_result])
+        all_numbers.append([exercise, the_result])
     return all_numbers
 
 def find_numbers(the_level):
@@ -133,14 +133,3 @@ def appear_in_all_numbers(all_numbers, exercise):
         if i[0] == exercise:
             return True
     return False
-
-def make_the_list_string(the_list):
-    """
-    make the list to string
-    :param the_list:
-    :return: the string
-    """
-    st = ""
-    for i in the_list:
-        st += str(i)
-    return st
