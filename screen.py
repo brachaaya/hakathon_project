@@ -36,7 +36,7 @@ english_button= tk.Button(
     border=0,
     text='English',
     font=('Arial', 16, 'bold'),
-    command= on_english_click()
+    # command= on_english_click()
 )
 
 english_button.grid(column=0, row=0)
@@ -55,7 +55,7 @@ hebrew_button= tk.Button(
     border=0,
     text='Hebrew',
     font=('Arial', 16, 'bold'),
-    command= on_hebrew_click()
+    # command= on_hebrew_click()
 )
 hebrew_button.grid(column=0, row=1)
 
