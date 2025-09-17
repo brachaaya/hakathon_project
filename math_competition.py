@@ -1,4 +1,7 @@
 import time
+import matematica
+
+list1 = matematica.which_level()
 
 def one_min_competition(calc):
     start_time = time.time()
@@ -17,3 +20,5 @@ def one_min_competition(calc):
 
 
     print(f"In one minute you solved : {count_false+count_true} \n You solved {count_true} correctly.")
+
+one_min_competition(list1)
