@@ -122,6 +122,7 @@ def hangmanGame(words, title):
         pygame.display.update()
         clock.tick(fps)
 
+
 def hangman():
     while True:
         for event in pygame.event.get():
