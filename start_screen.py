@@ -58,11 +58,8 @@ def create_game_buttons(subject, font):
         games = ["hangman", "flashcards", "memory game", "connections"]
     elif subject == "Hebrew":
         games = ["flashcards", "memory game", "connections"]
-    elif subject == "Math":
-        games = ["math competiton", "memory game", "connections"]
     else:
-        games = ["Game 1", "Game 2"]
-
+        games = ["math competiton", "memory game", "connections"]
     start_y = 220
     for i, game in enumerate(games):
         btn = TextButton(SCREEN_WIDTH//2 - 100, start_y + i*80, 200, 60, game, font,
@@ -87,7 +84,6 @@ easy_button = TextButton(SCREEN_WIDTH//2 - 100, 300, 120, 60, "Easy", font,
 
 hard_button = TextButton(SCREEN_WIDTH//2 + 20, 300, 120, 60, "Hard", font,
                          bg=color2, fg=color4, hover_bg=color3, border_color=color2)
-
 
 game_state = "main_menu"
 selected_subject = None
@@ -135,11 +131,20 @@ while run:
                 selected_game= btn.text
                 if selected_game=="memory game":
                     game_state="memory_game"
+                elif selected_game == "hangman":
+                    game_state = "hangman"
+                else:
+                    game_state = "game_menu"
 
     elif game_state == "memory_game":
         title_font = pygame.font.SysFont("Arial", 28, bold=True)
         text = title_font.render("Memory game", True, BLACK)
         text_rect = text.get_rect(center=(SCREEN_WIDTH//2, 150))
+        screen.blit(text, text_rect)
+    elif game_state == "hangman":
+        title_font = pygame.font.SysFont("Arial", 28, bold=True)
+        text = title_font.render("hangman", True, BLACK)
+        text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, 150))
         screen.blit(text, text_rect)
 
 
