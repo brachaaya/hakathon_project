@@ -115,7 +115,7 @@ def start_flashcards(flashcards):
 
         current_card = flashcards[current_card_index]
         draw_card(current_card["question"], current_card["answer"], show_answer)
-
     main_menu()
 
-main_menu()
+if __name__ == "__main__":
+    main_menu()

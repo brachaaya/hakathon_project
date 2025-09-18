@@ -1,5 +1,6 @@
 import pygame
 import hangman_try
+import flashcards
 # import memorygame
 # import math_competition
 
@@ -99,21 +100,16 @@ while run:
     if game_state == "main_menu":
         if english_button.draw(screen):
             selected_subject = "English"
-            game_state = "level_menu"
+            game_buttons = create_game_buttons(selected_subject, font)
+            game_state = "game_menu"
         if hebrew_button.draw(screen):
             selected_subject = "Hebrew"
-            game_state = "level_menu"
+            game_buttons = create_game_buttons(selected_subject, font)
+            game_state = "game_menu"
         if math_button.draw(screen):
             selected_subject = "Math"
-            game_state = "level_menu"
-
-    elif game_state == "level_menu":
-        title_font = pygame.font.SysFont("Arial", 28, bold=True)
-        text = title_font.render(f"choose level for{selected_subject}", True, BLACK)
-        text_rect = text.get_rect(center=(SCREEN_WIDTH//2, 150))
-        screen.blit(text, text_rect)
-        game_buttons = create_game_buttons(selected_subject, font)
-        game_state = "game_menu"
+            game_buttons = create_game_buttons(selected_subject, font)
+            game_state = "game_menu"
 
     elif game_state == "game_menu":
         title_font = pygame.font.SysFont("Arial", 28, bold=True)
@@ -128,6 +124,8 @@ while run:
                     game_state="memory_game"
                 elif selected_game == "hangman":
                     game_state = "hangman"
+                elif selected_game == "flashcards":
+                    game_state = "flashcards"
                 else:
                     game_state = "game_menu"
 
@@ -139,7 +137,7 @@ while run:
     elif game_state == "hangman":
         hangman_try.hangman()
     elif game_state == "flashcards":
-        hangman_try.hangman()
+        flashcards.main_menu()
 
 
     for event in pygame.event.get():
