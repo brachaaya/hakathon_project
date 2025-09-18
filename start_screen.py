@@ -1,4 +1,5 @@
 import pygame
+import hangman_try
 # import memorygame
 # import math_competition
 
@@ -111,15 +112,8 @@ while run:
         text = title_font.render(f"choose level for{selected_subject}", True, BLACK)
         text_rect = text.get_rect(center=(SCREEN_WIDTH//2, 150))
         screen.blit(text, text_rect)
-
-        if easy_button.draw(screen):
-            selected_level = "Easy"
-            game_buttons = create_game_buttons(selected_subject, font)
-            game_state = "game_menu"
-        if hard_button.draw(screen):
-            selected_level = "Hard"
-            game_buttons = create_game_buttons(selected_subject, font)
-            game_state = "game_menu"
+        game_buttons = create_game_buttons(selected_subject, font)
+        game_state = "game_menu"
 
     elif game_state == "game_menu":
         title_font = pygame.font.SysFont("Arial", 28, bold=True)
@@ -143,10 +137,9 @@ while run:
         text_rect = text.get_rect(center=(SCREEN_WIDTH//2, 150))
         screen.blit(text, text_rect)
     elif game_state == "hangman":
-        title_font = pygame.font.SysFont("Arial", 28, bold=True)
-        text = title_font.render("hangman", True, BLACK)
-        text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, 150))
-        screen.blit(text, text_rect)
+        hangman_try.hangman()
+    elif game_state == "flashcards":
+        hangman_try.hangman()
 
 
     for event in pygame.event.get():
