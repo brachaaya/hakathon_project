@@ -1,4 +1,6 @@
 import pygame
+
+import flashcards_hebrew
 import hangman_try
 import flashcards
 # import memorygame
@@ -93,7 +95,7 @@ while run:
 
     if game_state == "main_menu":
         title_font = pygame.font.SysFont("Arial", 28, bold=True)
-        text = title_font.render("chose subject", True, BLACK)
+        text = title_font.render("choose subject", True, BLACK)
         text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, 150))
         screen.blit(text, text_rect)
         if english_button.draw(screen):
@@ -111,7 +113,7 @@ while run:
 
     elif game_state == "game_menu":
         title_font = pygame.font.SysFont("Arial", 28, bold=True)
-        text = title_font.render(f"{selected_subject} - {selected_level} | choose game", True, BLACK)
+        text = title_font.render(f"{selected_subject} | choose game", True, BLACK)
         text_rect = text.get_rect(center=(SCREEN_WIDTH//2, 150))
         screen.blit(text, text_rect)
 
@@ -135,7 +137,10 @@ while run:
     elif game_state == "hangman":
         hangman_try.hangman()
     elif game_state == "flashcards":
-        flashcards.main_menu()
+        if selected_subject== "English":
+            flashcards.main_menu()
+        else:
+            flashcards_hebrew.main_menu()
 
 
     for event in pygame.event.get():
