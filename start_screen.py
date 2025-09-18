@@ -91,12 +91,11 @@ run = True
 while run:
     screen.fill(WHITE)
 
-    title_font = pygame.font.SysFont("Arial", 28, bold=True)
-    text = title_font.render("chose subject", True, BLACK)
-    text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, 150))
-    screen.blit(text, text_rect)
-
     if game_state == "main_menu":
+        title_font = pygame.font.SysFont("Arial", 28, bold=True)
+        text = title_font.render("chose subject", True, BLACK)
+        text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, 150))
+        screen.blit(text, text_rect)
         if english_button.draw(screen):
             selected_subject = "English"
             game_buttons = create_game_buttons(selected_subject, font)
