@@ -82,12 +82,6 @@ hebrew_button = TextButton(SCREEN_WIDTH//2 - 80, 200, 160, 60, "Hebrew", font,
 math_button = TextButton(SCREEN_WIDTH//2 + 90, 200, 160, 60, "Math", font,
                          bg=color2, fg=color4, hover_bg=color3, border_color=color2)
 
-easy_button = TextButton(SCREEN_WIDTH//2 - 100, 300, 120, 60, "Easy", font,
-                         bg=color2, fg=color4, hover_bg=color3, border_color=color2)
-
-hard_button = TextButton(SCREEN_WIDTH//2 + 20, 300, 120, 60, "Hard", font,
-                         bg=color2, fg=color4, hover_bg=color3, border_color=color2)
-
 game_state = "main_menu"
 selected_subject = None
 selected_level = None

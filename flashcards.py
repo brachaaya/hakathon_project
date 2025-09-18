@@ -1,7 +1,7 @@
 import pygame
 import sys
 import consts
-
+import random
 # Initialize Pygame
 pygame.init()
 width, height = 800, 600
@@ -74,14 +74,20 @@ def button(text, x, y, w, h, ic, ac, action=None):
 
 def main_menu():
     menu_running = True
+
+    easy_flashcard = flash_card(consts.EASY_ENGLISH_DICT)
+    hard_flashcard = flash_card(consts.HARD_ENGLISH_DICT)
+    random.shuffle(easy_flashcard)
+    random.shuffle(hard_flashcard)
+
     while menu_running:
         screen.fill(white)
         draw_text("Choose a level", 40, black, (width // 2, height // 2 - 150))
 
         button("Easy", 150, 400, 150, 100, darkgrey, lightgrey,
-               lambda: start_flashcards(flash_card(consts.EASY_ENGLISH_DICT)))
+               lambda: start_flashcards(easy_flashcard))
         button("Hard", 500, 400, 150, 100, darkgrey, lightgrey,
-               lambda: start_flashcards(flash_card(consts.HARD_ENGLISH_DICT)))
+               lambda: start_flashcards(hard_flashcard))
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
