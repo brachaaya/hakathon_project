@@ -90,6 +90,7 @@ game_buttons = []
 run = True
 while run:
     screen.fill(WHITE)
+
     title_font = pygame.font.SysFont("Arial", 28, bold=True)
     text = title_font.render("chose subject", True, BLACK)
     text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, 150))
